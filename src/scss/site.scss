@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css?family=Vollkorn|Roboto);
+
+body {
+  background: rgb(48, 89, 117); /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    rgba(48, 89, 117, 1) 0%,
+    rgba(86, 119, 141, 1) 51%,
+    rgba(48, 89, 117, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(48, 89, 117, 1) 0%,
+    rgba(86, 119, 141, 1) 51%,
+    rgba(48, 89, 117, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(48, 89, 117, 1) 0%,
+    rgba(86, 119, 141, 1) 51%,
+    rgba(48, 89, 117, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#305975', endColorstr='#305975',GradientType=1 ); /* IE6-9 */
+  @apply m-0 p-0;
+}
+
+div#fp-nav {
+    @apply z-30 hidden;
+    @media (min-width: 768px) {
+      @apply block;
+    }
+}
+
+#fp-nav ul li .fp-tooltip {
+  @apply hidden;
+  @media (min-width: 1024px) {
+    @apply block;
+  }
+}
+
+span {
+  background: #fff !important;
+}
+
+.text-shadow {
+  text-shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)";
+}
+
+.box div {
+  @apply w-4 h-4 block border-r border-b border-white -m-3;
+  transform: rotate(45deg);
+  animation: animate 3s infinite;
+}
+
+.box div:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.box div:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.line::after {
+  content: "";
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
+  @apply block relative h-px w-full left-0;
+  bottom: -0.4em;
+}
+
+.section {
+  @apply bg-cover bg-center .bg-no-repeat;
+}
+
+.fade>* {
+  @apply opacity-100;
+  -webkit-transition: opacity 2s cubic-bezier(.36,.92,.66,.49);
+  -moz-transition: opacity 2s cubic-bezier(.36,.92,.66,.49);
+  -ms-transition: opacity 2s cubic-bezier(.36,.92,.66,.49);
+  -o-transition: opacity 2s cubic-bezier(.36,.92,.66,.49);
+}
+
+#profile-section {
+  background-image: url("../img/unsplash1.jpg");
+}
+
+#experience-section {
+  background-image: url("../img/unsplash2.jpg");
+}
+
+#technology-section {
+  background-image: url("../img/unsplash3.jpg");
+}
+
+#education-section {
+  background-image: url("../img/unsplash4.jpg");
+}
+
+#portfolio-section {
+  background-image: url("../img/unsplash5.jpg");
+}
+
+.card {
+  @apply shadow-2 h-20 w-16 text-xs bg-white text-black rounded mr-2 mb-2;
+}
+
+.card img {
+  @apply w-12;
+}
+
+@screen sm {
+  .card {
+    @apply h-40 w-32 text-base mr-5 mb-5;
+  }
+  
+  .card img {
+    @apply w-auto;
+  }
+}
+
+.card-header {
+  @apply h-16 w-16 rounded-t flex justify-center items-center;
+}
+
+@screen sm {
+  .card-header {
+    @apply h-32 w-32;
+  }
+}
+
+.card-footer {
+  @apply h-4 w-16 rounded-b flex justify-center items-center font-semibold text-gray-800;
+}
+
+@screen sm {
+  .card-footer {
+    @apply h-8 w-32;
+  }
+}
+
+.port-card {
+  @apply shadow-2 w-64 h-64 bg-white text-black rounded mr-5 mb-5 ml-4 mt-20;
+}
+
+.port-card-header {
+  @apply w-64 h-64 flex justify-center items-center bg-cover shadow-24;
+}
+
+.port-card-footer {
+  @apply h-10 w-64 flex justify-center items-center text-white text-3xl font-semibold;
+}
+
+
+
+
+
